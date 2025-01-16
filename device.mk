@@ -13,6 +13,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 # Setup dalvik vm configs
 $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 
+# Call the MiuiCamera setup
+$(call inherit-product-if-exists, device/xiaomi/garnet-miuicamera/device.mk)
+
 # Qualcomm
 $(call inherit-product, hardware/qcom-caf/common/common.mk)
 
